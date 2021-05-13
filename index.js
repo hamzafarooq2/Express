@@ -1,9 +1,16 @@
 const express = require('express');
 const path = require('path');
 const students = require('./Students')
+const logger = require('./middleware/logger')
 
 
 const app = express();
+
+
+
+// Init middleware
+
+// app.use(logger);
 
 // Gets all students in postman
 app.get('/api/students', (req, res) => res.json(students)
